@@ -1,0 +1,27 @@
+{
+  "name": "org-to-markdown-example",
+  "private": true,
+  "version": "1.0.0",
+  "description": "org-to-markdown example",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/k2052/org-to-markdown.git"
+  },
+  "keywords": [
+    "orga",
+    "org-to-markdown"
+  ],
+  "author": "K-2052",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/k2052/org-to-markdown/issues"
+  },
+  "homepage": "https://github.com/k2052/org-to-markdown#readme",
+  "dependencies": {
+    "org-to-markdown": "0.0.1"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "next-orga",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "repository": {
+    "url": "k2052/org-to-markdown",
+    "directory": "packages/next-orga"
+  },
+  "dependencies": {
+    "@mdx-js/loader": "^1.0.20",
+    "@mdx-js/mdx": "^1.0.20",
+    "orga-loader": "0.0.1"
+  }
+}

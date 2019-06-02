@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "scripts": {
+    "prebootstrap": "npm i",
+    "bootstrap": "lerna bootstrap",
+    "lerna": "lerna",
+    "publish": "lerna publish",
+    "publish-next": "lerna publish --npm-tag=next --bump=prerelease"
+  },
+  "devDependencies": {
+    "lerna": "^3.14.1"
+  }
+}

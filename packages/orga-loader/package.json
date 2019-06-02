@@ -1,0 +1,31 @@
+{
+  "name": "orga-loader",
+  "version": "0.0.1",
+  "description": "A webpack loader for org-mode files. Works with mdx and markdown.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/k2052/orga-loader.git"
+  },
+  "keywords": [
+    "webpack",
+    "org-mode",
+    "orga",
+    "org",
+    "webpack-loader",
+    "org-to-markdown"
+  ],
+  "author": "K-2052",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/k2052/orga-loader/issues"
+  },
+  "homepage": "https://github.com/k2052/orga-loader#readme",
+  "dependencies": {
+    "loader-utils": "^1.2.3",
+    "org-to-markdown": "0.0.1"
+  }
+}

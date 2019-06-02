@@ -1,0 +1,92 @@
+* Next.js + Org + Mdx
+
+A next.js plugin that adds support for org mode files with mdx!
+
+** Installation
+
+#+BEGIN_EXAMPLE
+npm install --save next-orga orga-loader @mdx-js/loader
+#+END_EXAMPLE
+
+or
+
+#+BEGIN_EXAMPLE
+yarn add next-orga orga-loader @mdx-js/loader
+#+END_EXAMPLE
+
+** Usage
+
+Create a =next.config.js= in your project
+
+#+BEGIN_SRC js
+    // next.config.js
+    const withOrg = require('next-orga')()
+    module.exports = withOrg()
+#+END_SRC
+
+Optionally you can provide [[https://github.com/mdx-js/mdx#options][MDX options]]:
+
+#+BEGIN_SRC js
+const emoji = require("remark-emoji");
+    // next.config.js
+    const withOrg = require('next-orga')({
+      options: {
+        remarkPlugins: [emoji],
+        hastPlugins: [],
+      },
+    })
+    module.exports = withOrg()
+#+END_SRC
+
+Optionally you can add your custom Next.js configuration as a parameter
+
+#+BEGIN_SRC js
+    // next.config.js
+    const withOrg = require('next-orga')()
+    module.exports = withOrg({
+      webpack(config, options) {
+        return config
+      },
+    })
+#+END_SRC
+
+** Top level .mdx pages
+
+Define the =pagesExtensions= option to have Next.js handle =.org= files in the =pages= directory as pages:
+
+#+BEGIN_SRC js
+    // next.config.js
+    const withOrg = require('next-orga')({
+      extension: /\.org?$/,
+    })
+    module.exports = withOrg({
+      pageExtensions: ['js', 'jsx', 'org'],
+    })
+#+END_SRC
+
+** Syntax
+
+To write mdx forms use =begin_export= blocks. These blocks become jsx, import, export and elements. Here is an example:
+
+#+begin_src org
+#+begin_export import
+import { ReactComponent } from "unicorns-are-awesome";
+#+end_export
+      
+** An org doc
+
+#+begin_export jsx
+<ReactComponent />
+#+end_export
+
+A code block with info strings
+
+#+begin_src javascript repl
+// gets a repl 
+const unicorns = "are awesome!";
+#+end_src
+#+end_src
+
+** Example
+
+A full example is available in the [[https://github.com/k2052/org-to-markdown/tree/master/examples/next][examples]]

@@ -1,0 +1,28 @@
+{
+  "name": "mdx-stringify",
+  "version": "0.0.1",
+  "description": "Converts an mdxast to a string.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/k2052/org-to-markdown.git"
+  },
+  "keywords": [
+    "mdx",
+    "mdxast"
+  ],
+  "author": "K-2052",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/k2052/org-to-markdown/issues"
+  },
+  "homepage": "https://github.com/k2052/org-to-markdown#readme",
+  "dependencies": {
+    "remark-stringify": "^6.0.4",
+    "unherit": "^1.1.2",
+    "xtend": "^4.0.1"
+  }
+}

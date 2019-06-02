@@ -1,0 +1,40 @@
+{
+  "name": "org-to-markdown",
+  "version": "0.0.1",
+  "description": "Converts org to markdown and mdx",
+  "main": "index.js",
+  "bin": {
+    "org-to-markdown": "bin.js"
+  },
+  "scripts": {
+    "test": "ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/k2052/org-to-markdown.git"
+  },
+  "keywords": [
+    "org",
+    "orgajs",
+    "markdown",
+    "unified"
+  ],
+  "author": "K-2052",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/k2052/org-to-markdown/issues"
+  },
+  "homepage": "https://github.com/k2052/org-to-markdown#readme",
+  "dependencies": {
+    "get-stdin": "^7.0.0",
+    "mdx-stringify": "0.0.1",
+    "meow": "^5.0.0",
+    "orga-remark": "0.0.1",
+    "orga-unified": "^1.1.1",
+    "unified": "^7.1.0",
+    "unist-builder": "^1.0.4"
+  },
+  "devDependencies": {
+    "ava": "^1.4.1"
+  }
+}

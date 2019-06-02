@@ -1,0 +1,155 @@
+** org-to-markdown
+
+An org-mode to markdown/mdx converter. Uses [[https://github.com/xiaoxinghu/orgajs][orgajs]] for all the heavy lifting.
+
+Has the following features not found in other converters;
+
+1. MDX support. You can use jsx, import, and export statements!
+2. code blocks with info strings and parameters, e.g =js repl=
+3. Compatible with the [[https://unified.js.org/][unified]] ecosystem (because of orgajs). Want to combine this with remark plugins or mdx plugins? No problem!
+4. JS ecosystem support. Currently a webpack loader and next plugin is available.
+
+** Installation/Usage
+
+There is a cli, a library, a webpack loader, and [[https://github.com/k2052/org-to-markdown/tree/master/packages/next-orga][next plugin]] available.
+
+*** Syntax
+
+To write jsx use =begin_export= blocks. These blocks become jsx, import, export and elements. Here is an example:
+
+#+begin_src org
+\#+begin_export import
+import { ReactComponent } from "unicorns-are-awesome";
+\#+end_export
+
+** An org doc
+
+\#+begin_export jsx
+<ReactComponent />
+\#+end_export
+
+A code block with info strings
+
+\#+begin_src javascript repl
+// gets a repl 
+const unicorns = "are awesome!";
+\#+end_src
+#+end_src
+
+
+*** CLI
+
+You can install and use the cli using npx. The tool takes org via stdin and outputs to stdout:
+
+#+begin_src sh
+$ npx org-to-markdown < Unicorns.org > Unicorns.md
+#+end_src
+
+The mdxast and the mdast are compatible so if you want to use mdx you just need to use only need to change the file ext:
+
+#+begin_src sh
+$ npx org-to-markdown < Unicorns.org > Unicorns.mdx
+#+end_src
+
+*** Library
+
+The library exports a convert function, you can use it like this:
+
+#+begin_src js
+  const orgToMarkdown = require("org-to-markdown");
+  const orgString = `
+  * Org file 
+
+  - List of stuff
+  - unicorns
+  `;
+
+  (async () => {
+    const md = await orgToMarkdown(orgString);
+    console.log(md);
+  }); 
+#+end_src
+
+*** Using in Unified
+
+Things are built on two unified compatible libraries; orga-remark and mdx-stringify. You can use the orga-remark plugin to convert the orga ast (oast) to mdxast and mdx-stringify to stringify the mdxast. Here is an example:
+
+#+begin_src js
+  const unified = require("unified");
+  const parse = require("orga-unified");
+  const getStdin = require("get-stdin");
+  const orgaToRemark = require("orga-remark");
+  const stringify = require("mdx-stringify");
+
+  (async () => {
+    const s = await getStdin();
+    const md = await unified()
+      .use(parse)
+      .use(orgaToRemark)
+      .use(stringify)
+      .process(s);
+
+    console.log(md.contents);
+  })();
+#+end_src
+
+*** Webpack
+
+You can install the webpack loader like this:
+
+#+begin_src sh
+$ npm i @mdx-js/loader orga-loader
+#+end_src
+
+And use it like this
+
+#+begin_src js
+  module: {
+    rules: [
+      { test: /\.org?$/,
+        use: [
+          'babel-loader',
+          '@mdx-js/loader',
+          'orga-loader'
+        ]
+      },
+
+      // ...
+    ]
+  }
+#+end_src
+
+Then you can import your org file:
+
+#+begin_src js
+import React, { Component } from 'react'
+import Document, { frontMatter, tableOfContents } from './document.org'
+
+export default class Something extends Component {
+  render() {
+    return (
+      <div>
+        <h1>{frontMatter.title}</h1>
+        <Document />
+      </div>
+    )
+  }
+}
+#+end_src
+
+*** Next
+
+There is a next plugin [[https://github.com/k2052/org-to-markdown/tree/master/packages/next-orga][next-orga]] for usage instructions see its [[https://github.com/k2052/org-to-markdown/tree/master/packages/next-orga][docs]
+
+** Planned Features
+
+- Gatsby support 
+- Parcel support
+
+** Is this useless?
+
+It is mostly useless :)
+
+** License
+
+Licensed under ISC. © K-2052

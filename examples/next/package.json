@@ -1,0 +1,22 @@
+{
+  "private": true,
+  "name": "next-org-to-markdown-example",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@mdx-js/loader": "^1.0.20",
+    "@mdx-js/mdx": "^1.0.20",
+    "orga-loader": "0.0.1",
+    "next-orga": "0.0.1",
+    "next": "^8.1.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "remark-emoji": "^2.0.2",
+    "remark-images": "^0.18.0",
+    "unified-ui": "^0.0.3"
+  }
+}

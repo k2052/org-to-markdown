@@ -1,0 +1,30 @@
+{
+  "name": "orga-remark",
+  "version": "0.0.1",
+  "description": "Converts oast to mdxast.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/k2052/orga-remark.git"
+  },
+  "keywords": [
+    "org-mode",
+    "orga",
+    "org-to-markdown",
+    "remark",
+    "unified"
+  ],
+  "author": "K-2052",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/k2052/orga-remark/issues"
+  },
+  "homepage": "https://github.com/k2052/orga-remark#readme",
+  "dependencies": {
+    "unist-builder": "^1.0.4",
+    "unist-util-visit": "^1.4.1"
+  }
+}

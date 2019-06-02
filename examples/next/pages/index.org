@@ -1,0 +1,11 @@
+#+begin_export import
+import Button from '../components/button.js'
+#+end_export
+
+** Org + MDX + Next.js
+
+Look, a button! 👇
+
+#+begin_export jsx
+<Button>👋 Hello</Button>
+#+end_export
