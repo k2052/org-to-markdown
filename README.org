@@ -19,20 +19,20 @@ To write jsx use =begin_export= blocks. These blocks become jsx, import, export 
 
 #+begin_src org
 ,#+begin_export import
-,import { ReactComponent } from "unicorns-are-awesome";
+import { ReactComponent } from "unicorns-are-awesome";
 ,#+end_export
 
 ** An org doc
 
 ,#+begin_export jsx
-,<ReactComponent />
+<ReactComponent />
 ,#+end_export
 
 A code block with info strings
 
 ,#+begin_src javascript repl
-,// gets a repl 
-,const unicorns = "are awesome!";
+// gets a repl 
+const unicorns = "are awesome!";
 ,#+end_src
 #+end_src
 
