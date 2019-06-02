@@ -35,6 +35,11 @@ function toMdxAst(tree) {
   visit(tree, "list.item", node => {
     node.type = "listItem";
   });
+
+  visit(tree, "verbatim", node => {
+    node.type = "inlineCode";
+    node.value = node.children[0].value;
+  });
   return tree;
 }
 

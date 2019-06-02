@@ -13,6 +13,8 @@ A link [org-to-markdown](https://github.com/k2052/org-to-markdown) for docs. **b
 
     -   wat nested
 
+`verbatim/inline-code`
+
 ## Level 2 Heading
 
 Some content
