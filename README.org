@@ -36,7 +36,6 @@ const unicorns = "are awesome!";
 ,#+end_src
 #+end_src
 
-
 *** CLI
 
 You can install and use the cli using npx. The tool takes org via stdin and outputs to stdout:

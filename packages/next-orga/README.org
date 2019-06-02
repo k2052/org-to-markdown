@@ -69,22 +69,22 @@ Define the =pagesExtensions= option to have Next.js handle =.org= files in the =
 To write mdx forms use =begin_export= blocks. These blocks become jsx, import, export and elements. Here is an example:
 
 #+begin_src org
-#+begin_export import
+,#+begin_export import
 import { ReactComponent } from "unicorns-are-awesome";
-#+end_export
+,#+end_export
       
 ** An org doc
 
-#+begin_export jsx
+,#+begin_export jsx
 <ReactComponent />
-#+end_export
+,#+end_export
 
 A code block with info strings
 
-#+begin_src javascript repl
+,#+begin_src javascript repl
 // gets a repl 
 const unicorns = "are awesome!";
-#+end_src
+,#+end_src
 #+end_src
 
 ** Example
