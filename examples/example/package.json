@@ -22,6 +22,6 @@
   },
   "homepage": "https://github.com/k2052/org-to-markdown#readme",
   "dependencies": {
-    "org-to-markdown": "0.0.2"
+    "org-to-markdown": "0.0.3"
   }
 }

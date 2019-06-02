@@ -10,8 +10,8 @@
   "dependencies": {
     "@mdx-js/loader": "^1.0.20",
     "@mdx-js/mdx": "^1.0.20",
-    "orga-loader": "^0.0.2",
-    "next-orga": "^0.0.2",
+    "orga-loader": "^0.0.3",
+    "next-orga": "^0.0.3",
     "next": "^8.1.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
