@@ -24,4 +24,38 @@ Some content
 
 Content on a low level
 
+** Entry with Properties
+   :PROPERTIES:
+   :unicorns: are awesome
+   :END:
+
+#+begin_export md
+<div id="cats">
+#+end_export
+
+** Entry Wrapped by a HTML Element
+
+- Stuff
+- More Stuff
+
+*em*
+
+#+begin_export md
+</div>
+#+end_export
+
+#+begin_export jsx
+<AComponent>
+#+end_export
+** Entry Wrapped by JSX
+
+- A list
+- stuff
+- cats
+- item
+
+#+begin_export jsx
+</AComponent>
+#+end_export
 ** Some more stuff
+

@@ -13,6 +13,7 @@ function mdxStringify(options) {
   this.Compiler.prototype.visitors.jsx = jsx;
   this.Compiler.prototype.visitors.import = imprt;
   this.Compiler.prototype.visitors.export = exprt;
+  this.Compiler.prototype.visitors.md = md;
 
   function jsx(node) {
     return node.value;
@@ -23,6 +24,10 @@ function mdxStringify(options) {
   }
 
   function exprt(node) {
+    return node.value;
+  }
+
+  function md(node) {
     return node.value;
   }
 }

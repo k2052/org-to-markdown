@@ -27,4 +27,28 @@ Some content
 
 Content on a low level
 
+## Entry with Properties
+
+<div id="cats">
+
+## Entry Wrapped by a HTML Element
+
+-   Stuff
+-   More Stuff
+
+**em**
+
+</div>
+
+<AComponent>
+
+## Entry Wrapped by JSX
+
+-   A list
+-   stuff
+-   cats
+-   item
+
+</AComponent>
+
 ## Some more stuff

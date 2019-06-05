@@ -40,6 +40,11 @@ function toMdxAst(tree) {
     node.type = "inlineCode";
     node.value = node.children[0].value;
   });
+
+  visit(tree, "drawer", (node, index, parent) => {
+    parent.children.splice(index, 1);
+  });
+
   return tree;
 }
 

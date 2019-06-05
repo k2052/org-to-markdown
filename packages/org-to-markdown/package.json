@@ -32,7 +32,8 @@
     "orga-remark": "^0.0.3",
     "orga-unified": "^1.1.1",
     "unified": "^7.1.0",
-    "unist-builder": "^1.0.4"
+    "unist-builder": "^1.0.4",
+    "unist-util-inspect": "^4.1.4"
   },
   "devDependencies": {
     "ava": "^1.4.1"
