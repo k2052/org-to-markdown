@@ -138,12 +138,13 @@ export default class Something extends Component {
 
 *** Next
 
-There is a next plugin [[https://github.com/k2052/org-to-markdown/tree/master/packages/next-orga][next-orga]] for usage instructions see its [[https://github.com/k2052/org-to-markdown/tree/master/packages/next-orga][docs]
+There is a next plugin [[https://github.com/k2052/org-to-markdown/tree/master/packages/next-orga][next-orga]] for usage instructions see its [[https://github.com/k2052/org-to-markdown/tree/master/packages/next-orga][docs]]
 
 ** Planned Features
 
 - Gatsby support 
 - Parcel support
+- Drawer support. (maybe some sort of conversion to html attributes)
 
 ** Is this useless?
 
