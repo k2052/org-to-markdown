@@ -1,6 +1,6 @@
 {
   "name": "orga-remark",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Converts oast to mdxast.",
   "main": "index.js",
   "scripts": {

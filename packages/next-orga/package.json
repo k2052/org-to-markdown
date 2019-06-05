@@ -1,6 +1,6 @@
 {
   "name": "next-orga",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "index.js",
   "license": "MIT",
   "repository": {
@@ -10,6 +10,6 @@
   "dependencies": {
     "@mdx-js/loader": "^1.0.20",
     "@mdx-js/mdx": "^1.0.20",
-    "orga-loader": "^0.0.3"
+    "orga-loader": "^0.0.4"
   }
 }

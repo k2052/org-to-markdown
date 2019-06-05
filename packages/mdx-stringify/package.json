@@ -1,6 +1,6 @@
 {
   "name": "mdx-stringify",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Converts an mdxast to a string.",
   "main": "index.js",
   "scripts": {
