@@ -21,7 +21,11 @@ function toMdxAst(tree) {
 
   visit(tree, "link", node => {
     node.url = node.uri.raw;
-    node.children.push(h("text", { value: node.desc }));
+    if (node.desc) {
+      node.children.push(h("text", { value: node.desc }));
+    } else {
+      node.children.push(h("text", { value: node.uri.raw }));
+    }
   });
 
   visit(tree, "bold", node => {
@@ -29,6 +33,10 @@ function toMdxAst(tree) {
   });
 
   visit(tree, "italic", node => {
+    node.type = "emphasis";
+  });
+
+  visit(tree, "underline", node => {
     node.type = "emphasis";
   });
 
