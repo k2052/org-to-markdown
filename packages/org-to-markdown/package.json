@@ -36,6 +36,6 @@
     "unist-util-inspect": "^4.1.4"
   },
   "devDependencies": {
-    "ava": "^1.4.1"
+    "ava": "^5.1.0"
   }
 }
