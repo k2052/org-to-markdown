@@ -8,7 +8,7 @@
     "publish-next": "lerna publish --npm-tag=next --bump=prerelease"
   },
   "devDependencies": {
-    "lerna": "^3.14.1"
+    "lerna": "^6.0.3"
   },
   "name": "org-to-markdown"
 }
