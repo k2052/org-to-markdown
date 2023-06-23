@@ -28,7 +28,7 @@
   "dependencies": {
     "get-stdin": "^7.0.0",
     "mdx-stringify": "^0.0.5",
-    "meow": "^5.0.0",
+    "meow": "^12.0.1",
     "orga-remark": "^0.0.5",
     "orga-unified": "^1.1.1",
     "unified": "^7.1.0",
